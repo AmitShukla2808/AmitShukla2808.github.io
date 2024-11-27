@@ -860,7 +860,7 @@ I am deeply passionate about leveraging technology to solve real-world problems 
 
         </div>
 
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSc0MGXx6KMfvl-xg_8zT3MkBiquriTKxlvJUVJ5El7clbBjVA/formResponse" method="POST" onsubmit="window.location='thank-you.html';" class="contact-form">
+        <!-- <form action="https://docs.google.com/forms/d/e/1FAIpQLSc0MGXx6KMfvl-xg_8zT3MkBiquriTKxlvJUVJ5El7clbBjVA/formResponse" method="POST" onsubmit="window.location='thank-you.html';" class="contact-form">
           <div class="form-wrapper">
             <label for="name" class="form-label">Name</label>
             <div class="input-wrapper">
@@ -895,7 +895,35 @@ I am deeply passionate about leveraging technology to solve real-world problems 
         
           <button type="submit" class="btn btn-primary">Send</button>
         </form>
-        
+         -->
+
+
+        <form id="contact-form" class="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSc0MGXx6KMfvl-xg_8zT3MkBiquriTKxlvJUVJ5El7clbBjVA/formResponse" method="POST">
+          <div class="form-wrapper">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" name="entry.388880118" id="name" required placeholder="e.g John Doe" class="input-field">
+          </div>
+          <div class="form-wrapper">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" name="entry.1361574381" id="email" required placeholder="e.g johndoe@mail.com" class="input-field">
+          </div>
+          <div class="form-wrapper">
+            <label for="phone" class="form-label">Email</label>
+            <input type="phone" name="entry.1507945648" id="email" required placeholder="Phone Number" class="input-field">
+        </div>
+          <div class="form-wrapper">
+              <label for="message" class="form-label">Message</label>
+              <textarea name="entry.1401046760" id="message" required placeholder="Write message..." class="input-field"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+      
+      <!-- Success Message Pop-Up -->
+      <div id="success-popup" class="popup">
+          <p>Thank you for your message! We’ll get back to you soon.</p>
+          <button id="close-popup">Close</button>
+      </div>
+
       </section>
 
     </article>

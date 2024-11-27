@@ -117,3 +117,40 @@ if (localStorage.getItem("theme") === "light_theme") {
   document.body.classList.remove("light_theme");
   document.body.classList.add("dark_theme");
 }
+
+
+
+
+
+
+
+// Get the form and success popup elements
+const form = document.getElementById("contact-form");
+const popup = document.getElementById("success-popup");
+const closePopupButton = document.getElementById("close-popup");
+
+// Handle form submission
+form.addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevent the default form submission (page reload)
+    
+    const formData = new FormData(form); // Gather the form data
+
+    // Send the form data using AJAX (Fetch API)
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => {
+        // Show the success popup if the form is successfully submitted
+        popup.style.display = "block"; // Display the success pop-up
+    })
+    .catch(error => {
+        console.error('Error:', error); // Handle any errors during submission
+        alert('Sorry, something went wrong. Please try again later.');
+    });
+});
+
+// Close the popup when the "Close" button is clicked
+closePopupButton.addEventListener("click", function() {
+    popup.style.display = "none"; // Hide the pop-up
+});

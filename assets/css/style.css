@@ -1336,3 +1336,31 @@ textarea.input-field {
   .about-banner { max-width: 450px; }
 
 }
+
+/* Style for the pop-up */
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  z-index: 1000;
+}
+
+#close-popup {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#close-popup:hover {
+  background-color: #45a049;
+}

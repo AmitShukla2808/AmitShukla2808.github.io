@@ -860,69 +860,85 @@ I am deeply passionate about leveraging technology to solve real-world problems 
 
         </div>
 
-        <!-- <form action="https://docs.google.com/forms/d/e/1FAIpQLSc0MGXx6KMfvl-xg_8zT3MkBiquriTKxlvJUVJ5El7clbBjVA/formResponse" method="POST" onsubmit="window.location='thank-you.html';" class="contact-form">
+        <form id="contact-form" class="contact-form">
+
           <div class="form-wrapper">
+
             <label for="name" class="form-label">Name</label>
+
             <div class="input-wrapper">
-              <input type="text" name="entry.388880118" id="name" required placeholder="e.g John Doe" class="input-field">
+
+              <input type="text" name="name" id="name" required placeholder="e.g John Doe" class="input-field">
+
               <ion-icon name="person-circle"></ion-icon>
+
             </div>
+
           </div>
-        
+
           <div class="form-wrapper">
+
             <label for="email" class="form-label">Email</label>
+
             <div class="input-wrapper">
-              <input type="email" name="entry.1361574381" id="email" required placeholder="e.g johndoe@mail.com" class="input-field">
+
+              <input type="email" name="email" id="email" required placeholder="e.g johndoe@mail.com"
+                class="input-field">
+
               <ion-icon name="mail"></ion-icon>
+
             </div>
+
           </div>
-        
+
           <div class="form-wrapper">
+
             <label for="phone" class="form-label">Phone</label>
+
             <div class="input-wrapper">
-              <input type="tel" name="entry.1507945648" id="phone" required placeholder="Phone Number" class="input-field">
+
+              <input type="tel" name="phone" id="phone" required placeholder="Phone Number" class="input-field">
+
               <ion-icon name="call"></ion-icon>
+
             </div>
+
           </div>
-        
+
           <div class="form-wrapper">
+
             <label for="message" class="form-label">Message</label>
+
             <div class="input-wrapper">
-              <textarea name="entry.1401046760" id="message" required placeholder="Write message..." class="input-field"></textarea>
+
+              <textarea name="message" id="message" required placeholder="Write message..."
+                class="input-field"></textarea>
+
               <ion-icon name="chatbubbles"></ion-icon>
+
             </div>
-          </div>
-        
-          <button type="submit" class="btn btn-primary">Send</button>
-        </form>
-         -->
 
+          </div>
 
-        <form id="contact-form" class="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSc0MGXx6KMfvl-xg_8zT3MkBiquriTKxlvJUVJ5El7clbBjVA/formResponse" method="POST">
-          <div class="form-wrapper">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" name="entry.388880118" id="name" required placeholder="e.g John Doe" class="input-field">
-          </div>
-          <div class="form-wrapper">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" name="entry.1361574381" id="email" required placeholder="e.g johndoe@mail.com" class="input-field">
-          </div>
-          <div class="form-wrapper">
-            <label for="phone" class="form-label">Email</label>
-            <input type="tel" name="entry.1507945648" id="phone" required placeholder="Phone Number" class="input-field">
-        </div>
-          <div class="form-wrapper">
-              <label for="message" class="form-label">Message</label>
-              <textarea name="entry.1401046760" id="message" required placeholder="Write message..." class="input-field"></textarea>
-          </div>
           <button type="submit" class="btn btn-primary">Send</button>
-      </form>
-      
-      <!-- Success Message Pop-Up -->
-      <div id="success-popup" class="popup">
-          <p>Thank you for your message! We’ll get back to you soon.</p>
-          <button id="close-popup">Close</button>
-      </div>
+          
+        </form>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  emailjs.init("YSpwRnz98loET5Yp1"); // Replace with your EmailJS User ID
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_791v7de", "template_0f5py8m", this)
+      .then(function(response) {
+        alert("Message sent successfully!");
+      }, function(error) {
+        alert("Failed to send message, please try again.");
+      });
+  });
+       </script>
 
       </section>
 

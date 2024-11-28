@@ -154,3 +154,17 @@ form.addEventListener("submit", function(e) {
 closePopupButton.addEventListener("click", function() {
     popup.style.display = "none"; // Hide the pop-up
 });
+
+
+
+const elements = document.querySelectorAll('[data-animate]');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+    }
+  });
+}, { threshold: 0.1 });
+
+elements.forEach(el => observer.observe(el));

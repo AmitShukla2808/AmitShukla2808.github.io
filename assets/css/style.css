@@ -1379,24 +1379,31 @@ textarea.input-field {
 }
 
 
-@media (max-width: 768px) {
-  .youtube-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .youtube-banner {
-    justify-content: center;
-  }
-
-  .youtube-content {
-    max-width: 100%;
-  }
-
-  .youtube-banner img {
-    max-width: 70%;
-  }
+.youtube-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 20px;
+  gap: 20px;
 }
+
+.youtube-content {
+  max-width: 50%; /* Ensures text occupies half the space */
+}
+
+.youtube-banner {
+  flex: 1; /* Adjusts to fill remaining space */
+  display: flex;
+  justify-content: flex-end; /* Aligns image to the right */
+}
+
+.youtube-banner img {
+  max-width: 90%; /* Ensures the image does not exceed its container */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 
 
 html {

@@ -1397,3 +1397,8 @@ textarea.input-field {
     max-width: 70%;
   }
 }
+
+
+html {
+  scroll-behavior: smooth;
+}

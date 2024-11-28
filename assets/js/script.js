@@ -165,6 +165,6 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.add('in-view');
     }
   });
-}, { threshold: 0.20 });
+}, { threshold: 0.1 });
 
 elements.forEach(el => observer.observe(el));

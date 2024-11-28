@@ -1378,13 +1378,12 @@ textarea.input-field {
   transform: translateY(0);
 }
 
-
 .youtube-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 50px 20px;
-  gap: 20px;
+  gap: 40px; /* Adds space between image and text */
 }
 
 .youtube-banner {
@@ -1418,6 +1417,7 @@ textarea.input-field {
   .youtube-section {
     flex-direction: column;
     text-align: center;
+    gap: 20px; /* Smaller gap for smaller screens */
   }
 
   .youtube-banner {
